@@ -1,0 +1,8 @@
+{
+  "name": "goya-linktree",
+  "private": true,
+  "description": "Goya Boutique Resort reservation link page",
+  "dependencies": {
+    "@vercel/analytics": "2.0.1"
+  }
+}
