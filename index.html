@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goya Boutique Resorts</title>
+  <meta name="description" content="Book your stay at Goya Boutique Resorts — online, via WhatsApp or by email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f1e9;
+      --bg-accent: #ebe1d1;
+      --card: #ffffff;
+      --text: #2b2a26;
+      --muted: #7a7366;
+      --brand: #2f4a3a;
+      --brand-hover: #243a2d;
+      --gold: #b08d57;
+      --border: #e4dacb;
+      --shadow: 0 10px 30px -12px rgba(47, 74, 58, .25);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #141714;
+        --bg-accent: #1d221d;
+        --card: #1f241f;
+        --text: #efe9df;
+        --muted: #a39b8c;
+        --brand: #c8a56e;
+        --brand-hover: #d6b67f;
+        --gold: #c8a56e;
+        --border: #2f362f;
+        --shadow: 0 10px 30px -12px rgba(0, 0, 0, .6);
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #141714; --bg-accent: #1d221d; --card: #1f241f; --text: #efe9df;
+      --muted: #a39b8c; --brand: #c8a56e; --brand-hover: #d6b67f; --gold: #c8a56e;
+      --border: #2f362f; --shadow: 0 10px 30px -12px rgba(0, 0, 0, .6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      background-image: radial-gradient(ellipse at top, var(--bg-accent), var(--bg) 60%);
+      display: flex;
+      justify-content: center;
+      padding: 56px 16px 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { width: 100%; max-width: 440px; text-align: center; }
+
+    .logo {
+      width: 96px; height: 96px; margin: 0 auto 20px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 44px; font-weight: 600; color: var(--gold);
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600; font-size: 34px; line-height: 1.1;
+      letter-spacing: .5px;
+    }
+    .tagline {
+      margin-top: 8px; color: var(--muted);
+      font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .divider {
+      width: 48px; height: 1px; background: var(--gold);
+      margin: 24px auto 28px; opacity: .7;
+    }
+
+    .links { display: flex; flex-direction: column; gap: 14px; }
+    .link {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      text-align: left;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .link:hover { transform: translateY(-2px); border-color: var(--gold); }
+    .link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .link.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+    :root[data-theme="dark"] .link.primary { color: #141714; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .link.primary { color: #141714; } }
+    .link.primary:hover { background: var(--brand-hover); }
+
+    .icon {
+      flex: none; width: 44px; height: 44px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: var(--bg-accent);
+      color: var(--brand);
+    }
+    .link.primary .icon { background: rgba(255,255,255,.15); color: inherit; }
+    .icon svg { width: 22px; height: 22px; }
+    .label { flex: 1; min-width: 0; }
+    .label strong { display: block; font-weight: 600; font-size: 16px; }
+    .label span { display: block; font-size: 13px; opacity: .75; margin-top: 2px; overflow-wrap: anywhere; }
+    .arrow { flex: none; opacity: .5; }
+
+    footer { margin-top: 36px; font-size: 12px; color: var(--muted); letter-spacing: .5px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo" aria-hidden="true">G</div>
+    <h1>Goya Boutique Resorts</h1>
+    <p class="tagline">Reserve your stay</p>
+    <div class="divider"></div>
+
+    <nav class="links" aria-label="Reservation options">
+      <a class="link primary" href="https://booking.goyaboutiqueresorts.com/en" target="_blank" rel="noopener">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+        </span>
+        <span class="label"><strong>Book Online</strong><span>Check availability &amp; rates</span></span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a class="link" href="https://wa.me/6281337206868?text=Hello%20Goya%20Boutique%20Resorts%2C%20I%20would%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.8 9.8 0 0 1-1.5-5.22c0-5.42 4.41-9.83 9.84-9.83a9.77 9.77 0 0 1 9.83 9.84c0 5.42-4.41 9.83-9.84 9.83zm8.37-18.2A11.76 11.76 0 0 0 12.04.13C5.5.13.17 5.45.17 11.99c0 2.09.55 4.13 1.59 5.93L.07 24.07l6.3-1.65a11.84 11.84 0 0 0 5.67 1.44h.01c6.54 0 11.87-5.32 11.87-11.86 0-3.17-1.23-6.15-3.47-8.39z"/></svg>
+        </span>
+        <span class="label"><strong>Chat on WhatsApp</strong><span>+62 813-3720-6868</span></span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a class="link" href="mailto:reservation@goyaboutiqueresorts.com?subject=Reservation%20Request&body=Hello%20Goya%20Boutique%20Resorts%2C%0D%0A%0D%0AI%20would%20like%20to%20make%20a%20reservation.%0D%0A%0D%0ACheck-in%20date%3A%20%0D%0ACheck-out%20date%3A%20%0D%0ANumber%20of%20guests%3A%20%0D%0AName%3A%20%0D%0A%0D%0AThank%20you.">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </span>
+        <span class="label"><strong>Reserve by Email</strong><span>reservation@goyaboutiqueresorts.com</span></span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </nav>
+
+    <footer>&copy; <span id="y">2026</span> Goya Boutique Resorts</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
